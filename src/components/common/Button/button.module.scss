@@ -1,0 +1,115 @@
+@import '../../../assets/styles/variables';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-lg;
+  border-radius: $border-radius;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  line-height: 1.5;
+  position: relative;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+// Variants
+.primary {
+  background-color: $primary-color;
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: darken($primary-color, 5%);
+  }
+
+  &:active:not(:disabled) {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.outline {
+  background-color: transparent;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+
+  &:hover:not(:disabled) {
+    background-color: rgba($primary-color, 0.05);
+  }
+
+  &:active:not(:disabled) {
+    background-color: rgba($primary-color, 0.1);
+  }
+}
+
+.text {
+  background-color: transparent;
+  color: $primary-color;
+  padding: $spacing-xs;
+
+  &:hover:not(:disabled) {
+    background-color: rgba($primary-color, 0.05);
+  }
+
+  &:active:not(:disabled) {
+    background-color: rgba($primary-color, 0.1);
+  }
+}
+
+// Sizes
+.small {
+  padding: $spacing-xs $spacing-sm;
+  font-size: 0.875rem;
+}
+
+.medium {
+  padding: $spacing-sm $spacing-lg;
+  font-size: 1rem;
+}
+
+.large {
+  padding: $spacing-md $spacing-xl;
+  font-size: 1.125rem;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+// Loading state
+.loading {
+  color: transparent !important;
+  pointer-events: none;
+  position: relative;
+
+  .loadingSpinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  &.outline .loadingSpinner {
+    border: 2px solid rgba($primary-color, 0.2);
+    border-top-color: $primary-color;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+} 

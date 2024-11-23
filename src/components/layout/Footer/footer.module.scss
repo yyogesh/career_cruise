@@ -1,0 +1,79 @@
+@import '../../../assets/styles/variables';
+
+.footer {
+  background-color: $dark-color;
+  color: white;
+  padding: $spacing-xl 0 $spacing-md;
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $spacing-xl;
+}
+
+.section {
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: $spacing-md;
+    color: white;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    margin-bottom: $spacing-md;
+    color: $light-color;
+  }
+
+  p {
+    color: $secondary-color;
+    line-height: 1.5;
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  gap: $spacing-md;
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.bottom {
+  margin-top: $spacing-xl;
+  padding-top: $spacing-md;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+
+  p {
+    color: $secondary-color;
+    font-size: 0.875rem;
+  }
+} 

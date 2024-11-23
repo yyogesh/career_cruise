@@ -1,0 +1,54 @@
+@import '../../../assets/styles/variables';
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  width: 100%;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $dark-color;
+}
+
+.input {
+  padding: $spacing-sm;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  font-size: 1rem;
+  color: $dark-color;
+  background-color: white;
+  transition: all 0.2s ease;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 2px rgba($primary-color, 0.1);
+  }
+
+  &:disabled {
+    background-color: $light-color;
+    cursor: not-allowed;
+  }
+
+  &.error {
+    border-color: $danger-color;
+    
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($danger-color, 0.1);
+    }
+  }
+
+  &::placeholder {
+    color: $secondary-color;
+  }
+}
+
+.errorMessage {
+  font-size: 0.75rem;
+  color: $danger-color;
+  margin-top: -$spacing-xs;
+} 

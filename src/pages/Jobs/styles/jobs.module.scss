@@ -1,0 +1,14 @@
+@import '../../../assets/styles/variables';
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-lg;
+}
+
+.title {
+  font-size: 2rem;
+  color: $dark-color;
+  margin-bottom: $spacing-xl;
+  text-align: center;
+} 

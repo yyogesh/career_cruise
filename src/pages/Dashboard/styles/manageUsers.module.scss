@@ -1,0 +1,81 @@
+@import '../../../assets/styles/variables';
+
+.container {
+  padding: $spacing-lg;
+}
+
+.title {
+  font-size: 2rem;
+  color: $dark-color;
+  margin-bottom: $spacing-xl;
+}
+
+.userList {
+  background-color: white;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+  gap: $spacing-md;
+  padding: $spacing-md;
+  background-color: $light-color;
+  border-bottom: 1px solid $border-color;
+  font-weight: 600;
+  color: $dark-color;
+}
+
+.userItem {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+  gap: $spacing-md;
+  padding: $spacing-md;
+  border-bottom: 1px solid $border-color;
+  align-items: center;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.name {
+  font-weight: 500;
+  color: $dark-color;
+}
+
+.email {
+  color: $secondary-color;
+}
+
+.role {
+  text-transform: capitalize;
+  color: $dark-color;
+}
+
+.status {
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $border-radius;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: capitalize;
+
+  &.active {
+    background-color: rgba($success-color, 0.1);
+    color: $success-color;
+  }
+
+  &.blocked {
+    background-color: rgba($danger-color, 0.1);
+    color: $danger-color;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: $spacing-sm;
+  justify-content: flex-end;
+} 

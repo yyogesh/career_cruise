@@ -1,0 +1,50 @@
+@import '../../../assets/styles/variables';
+
+.settings {
+  padding: $spacing-lg;
+  max-width: 800px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 2rem;
+    color: $dark-color;
+    margin-bottom: $spacing-xl;
+  }
+}
+
+.section {
+  background-color: white;
+  padding: $spacing-lg;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: $spacing-xl;
+
+  h2 {
+    font-size: 1.25rem;
+    color: $dark-color;
+    margin-bottom: $spacing-lg;
+    padding-bottom: $spacing-sm;
+    border-bottom: 1px solid $border-color;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    button {
+      align-self: flex-start;
+      min-width: 120px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .settings {
+    padding: $spacing-md;
+  }
+
+  .section {
+    padding: $spacing-md;
+  }
+} 

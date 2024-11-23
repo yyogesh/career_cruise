@@ -1,0 +1,19 @@
+@import './variables';
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  background-color: $light-color;
+}
+
+.loader-container {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 

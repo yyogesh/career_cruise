@@ -1,0 +1,77 @@
+@import '../../../../assets/styles/variables';
+
+.card {
+  background-color: white;
+  border-radius: $border-radius;
+  padding: $spacing-lg;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.header {
+  margin-bottom: $spacing-md;
+}
+
+.title {
+  margin: 0 0 $spacing-xs;
+  font-size: 1.25rem;
+
+  a {
+    color: $dark-color;
+    text-decoration: none;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.company {
+  color: $secondary-color;
+  font-size: 0.875rem;
+}
+
+.details {
+  display: flex;
+  gap: $spacing-md;
+  margin-bottom: $spacing-md;
+  color: $secondary-color;
+  font-size: 0.875rem;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+
+    i {
+      color: $primary-color;
+    }
+  }
+}
+
+.description {
+  color: $dark-color;
+  line-height: 1.6;
+  margin-bottom: $spacing-lg;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  color: $primary-color;
+  text-decoration: none;
+  font-weight: 500;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+} 

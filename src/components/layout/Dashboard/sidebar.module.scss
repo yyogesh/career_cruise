@@ -1,0 +1,90 @@
+@import '../../../assets/styles/variables';
+
+.sidebar {
+  width: 280px;
+  background-color: white;
+  border-right: 1px solid $border-color;
+  height: 100%;
+  padding: $spacing-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding-bottom: $spacing-lg;
+  border-bottom: 1px solid $border-color;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: $primary-color;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.userInfo {
+  h3 {
+    font-size: 1rem;
+    color: $dark-color;
+    margin: 0;
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: $secondary-color;
+    margin: $spacing-xs 0 0;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.link {
+  padding: $spacing-sm $spacing-md;
+  color: $dark-color;
+  text-decoration: none;
+  border-radius: $border-radius;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: rgba($primary-color, 0.05);
+    color: $primary-color;
+  }
+
+  &.active {
+    background-color: $primary-color;
+    color: white;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .navigation {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: $spacing-sm;
+  }
+
+  .link {
+    white-space: nowrap;
+  }
+} 

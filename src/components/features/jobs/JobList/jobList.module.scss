@@ -1,0 +1,12 @@
+@import '../../../../assets/styles/variables';
+
+.container {
+  padding: $spacing-lg;
+}
+
+.error {
+  color: $danger-color;
+  text-align: center;
+  padding: $spacing-lg;
+  font-size: 1.1rem;
+} 

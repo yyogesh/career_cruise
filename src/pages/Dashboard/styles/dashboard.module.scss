@@ -1,0 +1,81 @@
+@import '../../../assets/styles/variables';
+
+.dashboard {
+  padding: $spacing-lg;
+}
+
+.title {
+  font-size: 2rem;
+  color: $dark-color;
+  margin-bottom: $spacing-xl;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: $spacing-lg;
+  margin-bottom: $spacing-xl;
+}
+
+.statCard {
+  background-color: white;
+  padding: $spacing-lg;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: $spacing-md;
+}
+
+.statIcon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.statInfo {
+  flex: 1;
+
+  h3 {
+    font-size: 0.875rem;
+    color: $secondary-color;
+    margin: 0 0 $spacing-xs;
+  }
+}
+
+.statValue {
+  display: flex;
+  align-items: baseline;
+  gap: $spacing-sm;
+
+  span:first-child {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $dark-color;
+  }
+}
+
+.statChange {
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  &.positive {
+    color: $success-color;
+  }
+
+  &.negative {
+    color: $danger-color;
+  }
+}
+
+.recentActivity {
+  background-color: white;
+  padding: $spacing-lg;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 1.25rem;
+    color: $dark-color;
+    margin-bottom: $spacing-lg;
+  }
+} 

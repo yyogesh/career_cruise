@@ -1,0 +1,65 @@
+@import '../../../assets/styles/variables';
+
+.alert {
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-md;
+  animation: slideIn 0.3s ease;
+}
+
+.message {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0 $spacing-xs;
+  opacity: 0.7;
+  color: inherit;
+  
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.success {
+  background-color: lighten($success-color, 45%);
+  border: 1px solid $success-color;
+  color: darken($success-color, 10%);
+}
+
+.error {
+  background-color: lighten($danger-color, 45%);
+  border: 1px solid $danger-color;
+  color: darken($danger-color, 10%);
+}
+
+.warning {
+  background-color: lighten($warning-color, 45%);
+  border: 1px solid $warning-color;
+  color: darken($warning-color, 10%);
+}
+
+.info {
+  background-color: lighten($info-color, 45%);
+  border: 1px solid $info-color;
+  color: darken($info-color, 10%);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} 

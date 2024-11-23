@@ -1,0 +1,23 @@
+@import '../../../assets/styles/variables';
+
+.dashboard {
+  display: flex;
+  min-height: calc(100vh - 64px); // Adjust based on your header height
+}
+
+.content {
+  flex: 1;
+  padding: $spacing-lg;
+  background-color: $light-color;
+  overflow-y: auto;
+}
+
+@media (max-width: $breakpoint-md) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .content {
+    padding: $spacing-md;
+  }
+} 

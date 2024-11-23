@@ -1,0 +1,61 @@
+@import '../../../assets/styles/variables';
+
+.container {
+  padding: $spacing-lg;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-xl;
+
+  h1 {
+    font-size: 2rem;
+    color: $dark-color;
+    margin: 0;
+  }
+}
+
+.jobList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.jobItem {
+  background-color: white;
+  padding: $spacing-lg;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jobInfo {
+  h3 {
+    font-size: 1.25rem;
+    color: $dark-color;
+    margin: 0 0 $spacing-xs;
+  }
+
+  p {
+    color: $secondary-color;
+    margin: 0 0 $spacing-xs;
+  }
+}
+
+.jobType {
+  display: inline-block;
+  padding: $spacing-xs $spacing-sm;
+  background-color: rgba($primary-color, 0.1);
+  color: $primary-color;
+  border-radius: $border-radius;
+  font-size: 0.875rem;
+}
+
+.actions {
+  display: flex;
+  gap: $spacing-sm;
+} 

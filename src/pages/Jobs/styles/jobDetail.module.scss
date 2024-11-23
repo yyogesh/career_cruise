@@ -1,0 +1,82 @@
+@import '../../../assets/styles/variables';
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $spacing-lg;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-lg;
+}
+
+.title {
+  font-size: 2rem;
+  color: $dark-color;
+  margin: 0;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $spacing-md;
+  padding: $spacing-lg;
+  background-color: white;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: $spacing-lg;
+
+  > div {
+    display: flex;
+    align-items: center;
+    color: $secondary-color;
+    font-size: 0.875rem;
+  }
+}
+
+.company {
+  font-weight: 500;
+  color: $dark-color !important;
+}
+
+.section {
+  background-color: white;
+  padding: $spacing-lg;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: $spacing-lg;
+
+  h2 {
+    font-size: 1.25rem;
+    color: $dark-color;
+    margin-bottom: $spacing-md;
+  }
+
+  p {
+    line-height: 1.6;
+    color: $secondary-color;
+  }
+}
+
+.requirements {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: $spacing-sm 0;
+    padding-left: $spacing-md;
+    position: relative;
+    color: $secondary-color;
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: $primary-color;
+    }
+  }
+} 

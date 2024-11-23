@@ -1,0 +1,41 @@
+@import '../../assets/styles/variables';
+
+.container {
+  min-height: calc(100vh - 64px); // Adjust based on your header height
+  padding: $spacing-lg;
+  background-color: $light-color;
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: $spacing-xl;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 1.5rem;
+  color: $dark-color;
+  margin-bottom: $spacing-lg;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.section {
+  margin-top: $spacing-xl;
+  padding-top: $spacing-lg;
+  border-top: 1px solid $border-color;
+
+  h2 {
+    font-size: 1.25rem;
+    color: $dark-color;
+    margin-bottom: $spacing-md;
+  }
+} 
